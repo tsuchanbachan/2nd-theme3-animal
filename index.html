@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gliss</title>
+  <meta name="description" content="〇〇〇〇の公式サイトです">
+  <!-- Google font -->
+
+  <!-- noindex -->
+  <meta name="robots" content="noindex">
+  <!-- css -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <header class="header">
+      <div class="header__inner inner">
+        <h1 class="header__logo"><a href="#">タイトル</a></h1>
+        <nav class="header__nav pc">
+          <ul>
+            <li><a href="#menu">menu1</a></li>
+            <li><a href="#about">menu2</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- mv -->
+      <div class="mv">
+        <div class="mv__image">
+          <picture>
+            <source media="(min-width: 768px)" srcset="./image/fv-pc.jpg">
+            <img src="./image/fv-sp.jpg" alt="キャッチコピー入れる">
+          </picture>
+        </div>
+        <div class="mv__contents">
+          <div class="mv__catch">
+            <h2>キャッチコピー<br class="sp">キャッチ２</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- メニュー -->
+      <section id="menu" class="menu">
+        <div class="menu__inner inner">
+          <div class="menu__title section-title">
+            <h2>menu</h2>
+          </div>
+
+          <div class="menu__contents">
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy;Copyright0000 <span>サイト名</span></p>
+    </footer>
+  </div>
+</body>
+
+</html>
