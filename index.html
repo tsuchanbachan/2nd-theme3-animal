@@ -12,6 +12,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   <!-- noindex -->
   <meta name="robots" content="noindex">
+  <!-- favicon -->
+  <link rel="icon" href="./favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="./favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png">
+  <link rel="manifest" href="./favicon/manifest.webmanifest">
   <!-- css -->
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -50,8 +55,7 @@
         </div>
         <div class="mv__contents">
           <div class="mv__catch">
-            <p>滑石きたむら動物病院は</p>
-            <h2>大切な家族の<br>ホームドクターです</h2>
+            <h2>滑石きたむら動物病院は<br><span>大切な家族の<br>ホームドクターです</span></h2>
           </div>
         </div>
       </div>
@@ -63,8 +67,8 @@
             <p>動物たちの健康で<br class="sp">幸せな生活をサポート</p>
           </div>
           <div class="greeting__contents">
-            <p class="greeting__text">当院は地域に密着し、皆さまの大切な家族の一員である動物たちのホームドクターを目指しています。</p>
-            <p class="greeting__text">緊急時だけではなく、日常のちょっとした不安や違和感などお気軽にご相談ください。</p>
+            <p class="greeting__text">当院は地域に密着し、皆さまの大切な家族の一員である動物たちのホームドクターを<span class="line-break">目指しています。</span></p>
+            <p class="greeting__text">緊急時だけではなく、日常のちょっとした不安や違和感などお気軽に<span class="line-break">ご相談ください。</span></p>
             <p class="greeting__text">動物たちが健康で幸せな生活を送ることができるようサポートいたします。</p>
           </div>
         </div>
@@ -101,7 +105,7 @@
                   </picture>
                 </div>
                 <div class="strength-item__textarea">
-                  <h3>エキゾチックアニマルも対応します</h3>
+                  <h3>エキゾチックアニマルも<span>対応します</span></h3>
                   <p>
                     犬・猫だけではなく、ウサギやハムスター、爬虫類や両生類、鳥類などエキゾチックアニマルも対応しております。
                   </p>
@@ -115,7 +119,7 @@
                   </picture>
                 </div>
                 <div class="strength-item__textarea">
-                  <h3>ご自宅まで伺う往診も行っています</h3>
+                  <h3>ご自宅まで伺う往診も<span>行っています</span></h3>
                   <p>
                     外出が難しい動物たちや飼い主さまのために、獣医師や看護師がご自宅まで伺う往診サービスも行っております。
                   </p>
@@ -194,7 +198,7 @@
               <li class="news__item news-item">
                 <a href="#" class="news-item__link">
                   <time class="news-item__date" datetime="0000-00-00">0000.00.00</time>
-                  <p class="news-item__title">去勢手術の助成金</p>
+                  <h3 class="news-item__title">去勢手術の助成金</h3>
                   <p class="news-item__text">長崎県より犬猫去勢手術の助成金制度が導入されました。</p>
                 </a>
               </li>
@@ -237,28 +241,36 @@
           <div class="access__title section-title">
             <h2>アクセス</h2>
           </div>
+
           <div class="access__contents">
             <div class="access__map">
-                <picture>
-                  <source media="(min-width: 768px)" srcset="./image/map-pc.jpg">
-                  <img src="./image/map-sp.jpg" alt="動物病院への地図">
-                </picture>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.236590922412!2d129.8366951762003!3d32.812495682171075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356aad0aefe2a6b9%3A0x13f32e3d4c83018!2z44CSODUyLTgwNjUg6ZW35bSO55yM6ZW35bSO5biC5qiq5bC-77yR5LiB55uu77yV4oiS77yT77yW!5e0!3m2!1sja!2sjp!4v1778911293060!5m2!1sja!2sjp"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="access__info access-info">
               <div class="access-info__name">
-                <h3>滑石きたむら動物病院</h3>
+                <p>滑石きたむら動物病院</p>
               </div>
-              <div class="access-info__contact">
-                <p class="access-info__address">〒852-8065　長崎県長崎市横尾○丁目○-○</p>
+              <!-- <div class="access-info__contact"> -->
+                <div class="access-info__address">
+                  <p>〒852-8065　<span>長崎県長崎市横尾○丁目○-○</span></p>
+                </div>
                 <dl class="access-info__phone">
                   <dt>電話：</dt>
-                  <dd>000-0000-0000</dd>
+                  <!-- スマホ時、タップで電話アプリ起動 -->
+                  <dd>
+                    <p class="pc">000-0000-0000</p>
+                    <a class="sp" href="tel:000-0000-0000">000-0000-0000</a>
+                  </dd>
                 </dl>
                 <dl class="access-info__email">
                   <dt>メール：</dt>
-                  <dd><a href="#">info@example.com</a></dd>
+                  <!-- メールソフトの起動 -->
+                  <dd><a href="mailto:info@example.com">info@example.com</a></dd>
                 </dl>
-              </div>
+              <!-- </div> -->
               <div class="access-info__information">
                 <dl>
                   <dt>診療時間：</dt>
@@ -283,8 +295,10 @@
 
           <div class="contact__contents">
             <div class="contact__text">
-              ご予約やご質問などお気軽にお問い合わせください。<br>
-              お問い合わせいただいてから3日以内の返信となります。
+              <p>
+                ご予約やご質問などお気軽にお問い合わせください。<br>
+                お問い合わせいただいてから3日以内の返信となります。
+              </p>
             </div>
             <div class="contact__form form">
               <form>
@@ -327,46 +341,48 @@
     <footer class="footer">
       <div class="footer__inner">
         <div class="footer__content">
+
           <nav class="footer__nav">
             <ul>
                 <li><a href="#">トップ</a></li>
                 <li><a href="#greeting">ご挨拶</a></li>
                 <li><a href="#strength">強み</a></li>
                 <li><a href="#service">サービス</a></li>
-              </ul>
-              <ul>
                 <li><a href="#news">お知らせ</a></li>
                 <li><a href="#access">アクセス</a></li>
                 <li><a href="#contact">お問い合わせ</a></li>
             </ul>
           </nav>
+
           <div class="footer__copyright">
-            <p>&copy;Copyright0000　滑石きたむら動物病院</p>
-            <div class="footer__sns-items">
-              <ul class="footer__sns sns">
-                <li class="sns__list">
-                  <a href="#" class="sns__link x" target="_blank" rel="noopener noreferrer">
-                    <img src="./image/icon-twitter.png" alt="x">
-                  </a>
-                </li>
-                <li class="sns__list">
-                  <a href="#" class="sns__link fb" target="_blank" rel="noopener noreferrer">
-                    <img src="./image/icon_facebook.png" alt="facebook">
-                  </a>
-                </li>
-                <li class="sns__list">
-                  <a href="#" class="sns__link youtube" target="_blank" rel="noopener noreferrer">
-                    <img src="./image/icon_youtube.png" alt="youtube">
-                  </a>
-                </li>
-                <li class="sns__list">
-                  <a href="#" class="sns__link insta" target="_blank" rel="noopener noreferrer">
-                    <img src="./image/icon_instagram.png" alt="instagram">
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <p>&copy;Copyright0000　<span>滑石きたむら動物病院</span></p>
           </div>
+
+          <div class="footer__sns">
+            <ul class="footer__sns-items sns">
+              <li class="sns__list">
+                <a href="#" class="sns__link x" target="_blank" rel="noopener noreferrer">
+                  <img src="./image/icon_twitter.svg" alt="x">
+                </a>
+              </li>
+              <li class="sns__list">
+                <a href="#" class="sns__link fb" target="_blank" rel="noopener noreferrer">
+                  <img src="./image/icon_facebook.svg" alt="facebook">
+                </a>
+              </li>
+              <li class="sns__list">
+                <a href="#" class="sns__link youtube" target="_blank" rel="noopener noreferrer">
+                  <img src="./image/icon_youtube.svg" alt="youtube">
+                </a>
+              </li>
+              <li class="sns__list">
+                <a href="#" class="sns__link insta" target="_blank" rel="noopener noreferrer">
+                  <img src="./image/icon_instagram.svg" alt="instagram">
+                </a>
+              </li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </footer>
