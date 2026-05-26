@@ -163,7 +163,7 @@ img {
 
 .header__logo h1 a::before {
   content: "";
-  background-image: url('../image/icon_foot.png');
+  background-image: url('../image/icon_foot.svg');
   background-size: cover;
   background-repeat: no-repeat;
   width: 2.549rem;
@@ -520,6 +520,12 @@ mv
 
 .service-item {
   width: calc(260 / 880 * 100%);
+}
+
+@media screen and (max-width:767px) {
+  .service-item {
+    width: 100%;
+  }
 }
 
 .service-item__image img {
