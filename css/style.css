@@ -596,12 +596,19 @@ mv
   margin-top: 4.3rem;
 }
 
+.news-item {
+  border-bottom: solid 0.1rem #707070;
+
+}
+
+.news-item:first-of-type {
+  border-top: solid 0.1rem #707070;
+}
+
 .news-item__link {
   display: flex;
   padding: 1.45rem 1.85rem;
-  border-bottom: solid 0.1rem #707070;
   align-items: center;
-
   column-gap: calc(27.5 / 880 * 100%);
   transition: opacity 0.4s;
 }
@@ -619,10 +626,6 @@ mv
   .news-item__link:hover {
     opacity: 0.7;
   }
-}
-
-.news-item:first-of-type .news-item__link  {
-  border-top: solid 0.1rem #707070;
 }
 
 .news-item__date {
@@ -787,11 +790,21 @@ mv
   color: var(--color-main);
   font-weight: var(--font-bold);
 }
-.access-info__phone a{}
 
-@media screen and (max-width:767px) {
-  .access-info__phone dd {
-    /* margin-left: -0.2rem; */
+.access-info__phone dd a{
+  transition: opacity 0.4s;
+}
+
+@media screen and (min-width:768px) {
+  .access-info__phone dd a {
+    /* 検証ツールで見るとリンク、HTML上はリンク、でもユーザーはクリックできない状態 */
+    pointer-events: none;
+  }
+}
+
+@media (any-hover: hover) {
+  .access-info__phone dd a:hover {
+    opacity: 0.7;
   }
 }
 
