@@ -986,9 +986,19 @@ mv
 .form__textarea textarea {
   background: #fff;
   width: 100%;
-  font-size: 2rem;
-  line-height:calc(33 / 20);
-  padding: 0.35rem;
+  font-size: 1.7rem;
+  line-height:calc(34 / 17);
+  padding: 0.3rem 1rem;
+}
+
+@media screen and (max-width:767px) {
+  .form__input input,
+  .form__textarea textarea {
+    font-size: 1.6rem;
+    /* line-height:calc(43 / 16); */
+    padding-block: 0.9rem;
+  }
+
 }
 
 @media screen and (max-width:767px) {
@@ -1039,7 +1049,8 @@ mv
   font-size: 2.5rem;
   font-weight: var(--font-bold);
   cursor: pointer;
-  line-height: calc(50 / 25);
+  line-height: 1;
+  height: 5rem;
   border-radius: 1rem;
   text-align: center;
   transition: background-color 0.4s, color 0.4s;
@@ -1049,7 +1060,8 @@ mv
 @media screen and (max-width:767px) {
   .contact__button input[type="submit"] {
     font-size: 2rem;
-    line-height:calc(39 / 20);
+    height: 4.1rem;
+    /* line-height:calc(39 / 20); */
   }
 }
 
